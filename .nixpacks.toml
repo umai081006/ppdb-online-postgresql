@@ -1,5 +1,0 @@
-[providers]
-node = "node"
-
-[phases.setup]
-nixPkgs = ["nodejs_20", "npm"]
