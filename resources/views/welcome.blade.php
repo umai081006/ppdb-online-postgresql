@@ -73,7 +73,7 @@
                     <ul class="text-left space-y-2">
                         <li><strong>Nomor Pendaftaran:</strong> {{ $reg->no_pendaftaran }}</li>
                         <li><strong>Nama Pendaftar:</strong> {{ $reg->student->user->name }}</li>
-                        <li><strong>Jalur:</strong> {{ $reg->jalur_pendaftaran->nama_jalur }}</li>
+                        <li><strong>Jalur:</strong> {{ $reg->jalurPendaftaran->nama_jalur }}</li>
                         <li><strong>Status Terkini:</strong> 
                             <span class="px-2 py-1 rounded text-white text-sm
                                 @if($reg->status == 'pending') bg-yellow-500
