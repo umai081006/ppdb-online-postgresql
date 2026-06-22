@@ -23,7 +23,7 @@ class PublicController extends Controller
             'nomor_pendaftaran' => 'required|string',
         ]);
 
-        $registration = Registration::with(['student.user', 'jalur_pendaftaran'])
+        $registration = Registration::with(['student.user', 'jalurPendaftaran'])
             ->where('no_pendaftaran', $request->nomor_pendaftaran)
             ->first();
 
