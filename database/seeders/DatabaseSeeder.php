@@ -19,12 +19,14 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // Create Admin
-        User::create([
-            'name' => 'Administrator',
-            'email' => 'admin@ppdb.com',
-            'password' => Hash::make('admin123'),
-            'role' => 'admin',
-        ]);
+        User::firstOrCreate(
+            ['email' => 'admin@ppdb.com'],
+            [
+                'name' => 'Administrator',
+                'password' => Hash::make('admin123'),
+                'role' => 'admin',
+            ]
+        );
 
         // Create Panitia
         User::create([
